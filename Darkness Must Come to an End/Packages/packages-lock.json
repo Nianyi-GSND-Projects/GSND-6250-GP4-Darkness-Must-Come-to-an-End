@@ -7,6 +7,12 @@
       "dependencies": {},
       "url": "https://packages.unity.com"
     },
+    "com.dbrizov.naughtyattributes": {
+      "version": "file:NaughtyAttributes",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
+    },
     "com.unity.animation.rigging": {
       "version": "1.2.1",
       "depth": 1,
