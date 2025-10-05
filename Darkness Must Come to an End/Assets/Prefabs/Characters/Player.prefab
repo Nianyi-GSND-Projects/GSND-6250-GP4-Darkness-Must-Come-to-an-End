@@ -76,6 +76,7 @@ MonoBehaviour:
   eye: {fileID: 8958754747519791092}
   moveSpeed: 1.8
   orientSpeed: 0.1
+  maxInteractDistance: 20
 --- !u!114 &5111924207486688216
 MonoBehaviour:
   m_ObjectHideFlags: 0

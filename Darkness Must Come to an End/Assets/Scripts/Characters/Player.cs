@@ -19,6 +19,10 @@ namespace Game
 			Cursor.lockState = CursorLockMode.None;
 		}
 
+		void Update()
+		{
+			UpdateFocusedInteraction();
+		}
 		void FixedUpdate()
 		{
 			float dt = Time.fixedDeltaTime;
@@ -46,10 +50,10 @@ namespace Game
 		#endregion
 
 		#region Control
-		[SerializeField][Range(0, 10)] float moveSpeed = 3.0f;
+		[Range(0, 10)] public float moveSpeed = 3.0f;
 		Vector3 bufferMovementInput = default;
 
-		[SerializeField][Range(0, 1)] float orientSpeed = 1.0f;
+		[Range(0, 1)] public float orientSpeed = 1.0f;
 		float Azimuth
 		{
 			get => transform.eulerAngles.y;
@@ -79,6 +83,9 @@ namespace Game
 
 		protected void OnInputOrientDelta(InputValue value)
 		{
+			if(!enabled)
+				return;
+
 			var raw = value.Get<Vector2>();
 			Azimuth = Azimuth + raw.x * orientSpeed;
 			float zenith = Zenith + raw.y * orientSpeed;
@@ -89,6 +96,66 @@ namespace Game
 			else
 				zenith = Mathf.Clamp(zenith, 270, 360);
 			Zenith = zenith;
+		}
+		#endregion
+
+		#region Interaction
+		Interactable focusedInteraction = null;
+		Interactable FocusedInteraction
+		{
+			get => focusedInteraction;
+			set
+			{
+				if(value != null && !value.enabled)
+					value = null;
+				if(value == focusedInteraction)
+					return;
+				if(focusedInteraction)
+					focusedInteraction.onLoseFocus?.Invoke();
+				focusedInteraction = value;
+				if(focusedInteraction)
+					focusedInteraction.onFocused?.Invoke();
+			}
+		}
+		[SerializeField][Min(0)] float maxInteractDistance = 10.0f;
+
+		void UpdateFocusedInteraction()
+		{
+			var hits = Physics.RaycastAll(eye.position, eye.forward, maxInteractDistance);
+			bool flag = false;
+			foreach(var hit in hits)
+			{
+				Interactable result = hit.transform.gameObject.GetComponentInParent<Interactable>();
+				if(result)
+				{
+					if(hit.distance > maxInteractDistance)
+						result = null;
+					if(result.maxInteractDistance > 0 && hit.distance > result.maxInteractDistance)
+						result = null;
+				}
+				if(result != null)
+				{
+					FocusedInteraction = result;
+					return;
+				}
+			}
+			if(!flag)
+				FocusedInteraction = null;
+		}
+
+		protected void OnInteract()
+		{
+			if(!FocusedInteraction)
+				return;
+			FocusedInteraction.Interact();
+		}
+		#endregion
+
+		#region Note
+		protected void OnToggleNote()
+		{
+			GameManager.Instance.NoteOpen = enabled;
+			enabled = !enabled;
 		}
 		#endregion
 	}

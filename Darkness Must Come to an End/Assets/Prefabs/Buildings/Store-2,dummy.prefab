@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4067487995230365245}
   - component: {fileID: 6650557696143200856}
+  - component: {fileID: 3908029547217561132}
+  - component: {fileID: 576139401507873766}
   m_Layer: 0
   m_Name: Store-2,dummy
   m_TagString: Untagged
@@ -55,6 +57,53 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 20, y: 6, z: 20}
   m_Center: {x: 0, y: 2, z: 0}
+--- !u!114 &3908029547217561132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3441952888866135307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71d03182667d6bf44b3192a48006ada6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  oneTime: 0
+  onInteract:
+    m_PersistentCalls:
+      m_Calls: []
+  maxInteractDistance: 0
+  onFocused:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 20380998654d46b4e835205efedf8035, type: 2}
+        m_TargetAssemblyTypeName: Game.GameManagerAgent, Assembly-CSharp
+        m_MethodName: SeeStore2
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onLoseFocus:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &576139401507873766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3441952888866135307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49274f1cd56f56b43ac4982371bd46e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3470923765031381403
 GameObject:
   m_ObjectHideFlags: 0
