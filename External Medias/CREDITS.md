@@ -1,0 +1,9 @@
+- `Rain from inside.wav.mp3`: For raining background voice https://freesound.org/people/allrealsound/sounds/161705/
+- `Footstep_Dirt.wav.mp3`: For footstep sounds https://freesound.org/people/FallujahQc/sounds/403164/
+- Some external assets migrated from past assignments for this class:
+	- Plank texture
+	- Grass texture
+	- Tree models
+- `80116179-concrete-pavement-texture.jpg`: For concrete pavement texture https://www.123rf.com/photo_80116179_concrete-pavement-texture.html
+- `black-road-texture_1160-806.png`: For road surface https://www.freepik.com/free-photos-vectors/asphalt-texture-seamless
+- `green-leaf-foliage-texture-background-free-501.png`: Leaf texture https://www.textures4photoshop.com/tex/nature-grass-and-foliage/green-leaf-foliage-texture-background-free.aspx

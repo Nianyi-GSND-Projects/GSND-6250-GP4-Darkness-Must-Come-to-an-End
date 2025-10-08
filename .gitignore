@@ -1,3 +1,5 @@
 /dev
 /private
 /temp
+/**/*.blend1
+/Builds
