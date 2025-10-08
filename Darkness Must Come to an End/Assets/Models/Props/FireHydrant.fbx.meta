@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 3e4b780df7f3e6d46a70e5870860cc9d
+guid: 9cacc8fbd12ba094f871d92de3bf35db
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -7,23 +7,88 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Center
-    second: {fileID: 2100000, guid: fc58b078bf9d87b419ccfaee7d936c92, type: 2}
+      name: lambert4
+    second: {fileID: 2100000, guid: 95b68ed93621c78458db5bdcd27f6d58, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Material
-    second: {fileID: 2100000, guid: f9fd5b703eaf2484f97f6555cfcbbbbe, type: 2}
+      name: pasted__lambert4
+    second: {fileID: 2100000, guid: 57ab9d130acd32b4b8ddc3465c90f040, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Ring
+      name: pasted__pasted__lambert10
+    second: {fileID: 2100000, guid: 0817815b15fcac34887b82fc063a813b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pasted__pasted__lambert11
+    second: {fileID: 2100000, guid: 2de0578821bacb44a87dc2b490594d0f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pasted__pasted__lambert13
+    second: {fileID: 2100000, guid: f8036bfd56ec69b4ab11557714b1455b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pasted__pasted__lambert16
+    second: {fileID: 2100000, guid: f8036bfd56ec69b4ab11557714b1455b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pasted__pasted__lambert18
+    second: {fileID: 2100000, guid: f8036bfd56ec69b4ab11557714b1455b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pasted__pasted__lambert19
+    second: {fileID: 2100000, guid: f8036bfd56ec69b4ab11557714b1455b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pasted__pasted__lambert21
+    second: {fileID: 2100000, guid: f8036bfd56ec69b4ab11557714b1455b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pasted__pasted__lambert4
+    second: {fileID: 2100000, guid: f8036bfd56ec69b4ab11557714b1455b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pasted__pasted__lambert7
+    second: {fileID: 2100000, guid: f8036bfd56ec69b4ab11557714b1455b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pasted__pasted__lambert8
+    second: {fileID: 2100000, guid: f8036bfd56ec69b4ab11557714b1455b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pasted__pasted__lambert9
+    second: {fileID: 2100000, guid: f8036bfd56ec69b4ab11557714b1455b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: standardSurface2
+    second: {fileID: 2100000, guid: f8036bfd56ec69b4ab11557714b1455b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "\u67F1\u4F53"
     second: {fileID: 2100000, guid: e7deb71d463b11141bea9099081faf96, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Stick
-    second: {fileID: 2100000, guid: 0dca28a147f5432458a7e0bb17ffb835, type: 2}
+      name: "\u76D6\u4E86\u5E3D\u4E86"
+    second: {fileID: 2100000, guid: e31538f82d4ff8348a92c73a03af648e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "\u9489\u5B50"
+    second: {fileID: 2100000, guid: e7deb71d463b11141bea9099081faf96, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -55,7 +120,7 @@ ModelImporter:
     isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 2
+    globalScale: 1
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
@@ -110,7 +175,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 2
+    globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
@@ -121,7 +186,7 @@ ModelImporter:
   humanoidOversampling: 1
   avatarSetup: 0
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
-  importBlendShapeDeformPercent: 0
+  importBlendShapeDeformPercent: 1
   remapMaterialsIfMaterialImportModeIsNone: 0
   additionalBone: 0
   userData: 
