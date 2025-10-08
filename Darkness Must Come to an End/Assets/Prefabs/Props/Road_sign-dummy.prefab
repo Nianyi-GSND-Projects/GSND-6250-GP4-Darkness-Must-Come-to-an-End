@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6781739822590982437}
   - component: {fileID: 3008576096400693261}
+  - component: {fileID: 2183098997513336426}
   m_Layer: 0
   m_Name: Road_sign-dummy
   m_TagString: Untagged
@@ -56,6 +57,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.8, y: 1.6, z: 0.1}
   m_Center: {x: 0, y: 0.8, z: 0}
+--- !u!114 &2183098997513336426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 83971116054043291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36fa1af4a4cce3948902e499ce599dde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 4230572262931056424}
 --- !u!1 &266292414933871789
 GameObject:
   m_ObjectHideFlags: 0

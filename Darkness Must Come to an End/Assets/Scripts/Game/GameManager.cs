@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.SocialPlatforms.Impl;
 
 namespace Game
 {
@@ -52,6 +51,11 @@ namespace Game
 			worldDialoguePanel.GetComponent<WorldDialoguePanelPositioner>().speaker = son.transform;
 
 			player.moveSpeed *= walkingSpeedBoost;
+		}
+
+		protected void Start()
+		{
+			StartCoroutine(AssignRoadSigns());
 		}
 
 		protected void OnDestroy()
@@ -119,8 +123,7 @@ namespace Game
 
 		public void ArriveAtJenny()
 		{
-			// TODO
-			Debug.Log("Arrived at auntie Jenny's house.");
+			ShowControlGuidance("The father & son duo arrived at auntie Jenny's house and had their stomachs filled up. End of experience.");
 		}
 		#endregion
 
@@ -233,6 +236,36 @@ namespace Game
 			if(line.time > 0f)
 				return line.time;
 			return Mathf.Max(3f, line.content.Length * 0.05f);
+		}
+		#endregion
+
+		#region Road signs
+		public System.Action onRoadSignAssigned;
+		List<RoadSign> roadSigns = new();
+
+		public void RegisterRoadSign(RoadSign rs)
+		{
+			roadSigns.Add(rs);
+		}
+
+		IEnumerator AssignRoadSigns()
+		{
+			yield return new WaitForEndOfFrame();
+			yield return new WaitForEndOfFrame();
+
+			roadSigns.Sort((a, b) =>
+			{
+				Vector3 pa = a.transform.position, pb = b.transform.position;
+				if(!Mathf.Approximately(pa.z, pb.z))
+					return Mathf.CeilToInt(pa.z - pb.z);
+				return Mathf.CeilToInt(pa.x - pb.x);
+			});
+
+			int jennyIndex = roadSigns.FindIndex(rs => rs.gameObject.tag == "Jenny Roadsign");
+
+			for(int i = 0; i < roadSigns.Count; ++i)
+				roadSigns[i].number = i - jennyIndex + 84;
+			onRoadSignAssigned?.Invoke();
 		}
 		#endregion
 	}

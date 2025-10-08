@@ -4,11 +4,11 @@ namespace Game
 {
 	public class Store2Controller : MonoBehaviour
 	{
+		[SerializeField] new Light light;
+
 		public void Close()
 		{
-			// TODO
-			foreach(var renderer in GetComponentsInChildren<Renderer>())
-				renderer.material.color = Color.gray;
+			light.enabled = false;
 		}
 	}
 }
